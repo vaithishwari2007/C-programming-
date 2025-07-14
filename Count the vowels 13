@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+#include <ctype.h> 
+
+
+
+int isVowel(char ch) {
+
+    ch = tolower(ch); 
+
+    return (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u');
+
+}
+
+int main() {
+
+    char word[100];
+
+    int count = 0;
+
+    
+
+    scanf("%s", word);
+
+    
+
+    for (int i = 0; word[i] != '\0'; i++) {
+
+        if (isVowel(word[i])) {
+
+            count++;
+
+        }
+
+    }
+
+    
+
+    printf("count: %d\n", count);
+
+    return 0;
+
+}
