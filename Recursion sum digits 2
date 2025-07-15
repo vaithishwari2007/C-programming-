@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+
+
+int sum_of_digits(int n) {
+
+    if (n == 0)
+
+        return 0;
+
+    else
+
+        return (n % 10) + sum_of_digits(n / 10);
+
+}
+
+int main() {
+
+    int n;
+
+    scanf("%d", &n);
+
+    if (n < 1000) {
+
+        int result = sum_of_digits(n);
+
+        
+
+        printf("Sum of Digit:%04d", result);
+
+    } else {
+
+    
+
+        printf("Enter a Valid Input!!!!!!!");
+
+    }
+
+    return 0;
+
+}
